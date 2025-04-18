@@ -55,7 +55,7 @@ creating API </br>
 			return res.json("From Backend"); </br>
 		}) </br>
 
-listening to the port of server for making a connection </br>
+listening to the port of server </br>
 		app.listen(3001, () => { </br>
 			console.log("listening"); </br>
 		})
