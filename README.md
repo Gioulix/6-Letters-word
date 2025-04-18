@@ -4,7 +4,7 @@
 
 Picking a random 6 letter word from a database and if the word we type has any letter at a correct position it's highlighted.
 
-First we make 2 folders in project folder (Backend and Frontend) </br>
+First we make Backend folder in project folder  </br>
 Open terminal </br>
 cd Backend </br>
 </br>
@@ -12,7 +12,8 @@ initializing a new node.js project </br>
 npm init -y</br>
 npm install express mysql cors nodemon </br>
 </br>
-instaling all the packages we need for the frontend </br>
+Making and instaling all the packages we need for the frontend </br>
+npm create vite@latest </br>
 cd Frontend </br>
 npm install </br>
 </br>
@@ -22,6 +23,9 @@ npm start </br>
 </br>
 cd Frontend </br>
 npm run dev </br>
+
+at package.json </br>
+"start": "nodemon server.js" (under scripts)</br>
 
 creating a server.js file in Backend folder and writing </br>
 
@@ -58,4 +62,13 @@ creating API </br>
 listening to the port of server </br>
 		app.listen(3001, () => { </br>
 			console.log("listening"); </br>
-		})
+		}) </br>
+ </br>
+ Inside App.jsx writing  </br>
+const [data, setData] = useState([])  </br>
+useEffect(() => {  </br>
+fetch('http://localhost:3001/users')  </br>
+.then(res => res.json())  </br>
+.then(data => setData(data))  </br>
+.catch(err => console.log(err));  </br>
+}, [])
