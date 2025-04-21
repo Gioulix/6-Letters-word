@@ -47,12 +47,14 @@ const db = mysql.createConnection({  </br>
  </br>
 getting data from the database </br>
 		app.get('/(name of table)', (req, res) => { </br>
-		    	const sql = "SELECT * FROM (name of table)"; </br>
-			db.query(sql, (err, data) => { </br>
-				if(err) return res.json(err); </br>
-				return res.json(data); </br>
+		    	 db.query(
+   				 "SELECT word FROM six_leters ORDER BY RAND() LIMIT 1",
+   				 (err, results) => {
+    				   if (err) throw err;
+     				 res.json(results[0]);
+   		 		}
+  				);
 			}) </br>
-		}) </br>
 
 
 listening to the port of server </br>
