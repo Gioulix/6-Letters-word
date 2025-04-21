@@ -1,0 +1,26 @@
+.letter-boxes {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.letter-box {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+}
+.submitted-words {
+  margin-top: 20px;
+}
+.letter-box.correct {
+  background-color: rgb(5, 193, 5);
+  color: white;
+  border-color: rgb(16, 0, 81);
+}
