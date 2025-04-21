@@ -60,7 +60,7 @@ listening to the port of server </br>
 			console.log("listening"); </br>
 		}) </br>
  </br>
- Inside App.jsx writing  </br>
+ Inside App.jsx write  </br>
 const [data, setData] = useState([])  </br>
 useEffect(() => {  </br>
 fetch('http://localhost:3001/users')  </br>
