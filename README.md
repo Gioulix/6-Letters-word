@@ -48,12 +48,12 @@ const db = mysql.createConnection({  </br>
 getting data from the database </br>
 		app.get('/(name of table)', (req, res) => { </br>
 		    	 db.query(
-   				 "SELECT word FROM six_leters ORDER BY RAND() LIMIT 1",
-   				 (err, results) => {
-    				   if (err) throw err;
-     				 res.json(results[0]);
-   		 		}
-  				);
+   				 "SELECT word FROM six_leters ORDER BY RAND() LIMIT 1", </br>
+   				 (err, results) => {			</br>
+    				   if (err) throw err;			</br>
+     				 res.json(results[0]);			</br>
+   		 		}					</br>
+  				);					</br>
 			}) </br>
 
 
