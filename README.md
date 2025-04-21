@@ -53,11 +53,7 @@ getting data from the database </br>
 				return res.json(data); </br>
 			}) </br>
 		}) </br>
- </br>
-creating API </br>
-		app.get('/', (req,res) => { </br>
-			return res.json("From Backend"); </br>
-		}) </br>
+
 
 listening to the port of server </br>
 		app.listen(3001, () => { </br>
