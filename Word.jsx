@@ -73,7 +73,8 @@ function Word() {
         ))}
       </div>
       <div className="message">
-        {message === "true" && <p>You guessed the word!</p>}
+        {message === "true" && <p>You guessed the word!</p> &&
+          alert("Good Job!")}
         {message === "false" && <p>Try again!</p>}
         {submittedWords.length >= 5 && message === "false" && (
           <p>You lose the game!</p>
